@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — RackyWeb Academy</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+  body { display:flex; align-items:center; justify-content:center; min-height:100vh; padding:40px; }
+  .err-wrap {
+    max-width:560px; text-align:center; position:relative; z-index:2;
+    animation: fade-up .9s ease both;
+  }
+  @keyframes fade-up { from { opacity:0; transform:translateY(40px); } to { opacity:1; transform:none; } }
+  .err-code {
+    font-family:var(--font-display); font-size:clamp(100px,20vw,200px); font-weight:800;
+    line-height:1; letter-spacing:-0.06em;
+    background:var(--grad-prism); -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+    background-size:300%; animation:prism-shift 5s ease-in-out infinite alternate;
+  }
+  @keyframes prism-shift { from { background-position:0%; } to { background-position:100%; } }
+  .err-title { font-family:var(--font-display); font-size:28px; font-weight:800; color:#fff; margin:10px 0 16px; }
+  .err-desc  { font-size:16px; color:var(--muted); line-height:1.7; margin-bottom:36px; }
+  .err-actions { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+
+  /* background image */
+  body::before {
+    content:''; position:fixed; inset:0; z-index:0;
+    background:
+      linear-gradient(160deg, rgba(8,6,4,0.88) 0%, rgba(20,10,4,0.82) 100%),
+      url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=75') center/cover no-repeat;
+  }
+  /* ripple */
+  .btn .ripple { position:absolute; border-radius:50%; background:rgba(255,255,255,0.3); transform:scale(0); animation:ripple-anim .65s linear; pointer-events:none; }
+  @keyframes ripple-anim { to { transform:scale(4); opacity:0; } }
+</style>
+</head>
+<body>
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+<canvas id="particles-canvas"></canvas>
+<div id="mouse-glow"></div>
+
+<div class="err-wrap">
+  <div class="err-code">404</div>
+  <div class="err-title">Lost in the Digital Universe</div>
+  <div class="err-desc">The page you're looking for has drifted beyond our galaxy. Don't worry — there are endless worlds to explore back home.</div>
+  <div class="err-actions">
+    <a href="index.html" class="btn btn-gold btn-pulse" onclick="ripple(event)">🏠 Return Home</a>
+    <a href="index.html#academy" class="btn btn-ghost" onclick="ripple(event)">🎓 Enter Academy</a>
+  </div>
+
+  <!-- Orbital rings decoration -->
+  <div style="position:relative;width:280px;height:280px;margin:50px auto 0;pointer-events:none;">
+    <div class="hero-ring hr1" style="animation-duration:18s;"></div>
+    <div class="hero-ring hr2" style="animation-duration:12s;"></div>
+    <div class="hero-ring hr3" style="animation-duration:22s;"></div>
+    <div class="hero-orb" style="width:120px;height:120px;"></div>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:44px;z-index:2;">🌌</div>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

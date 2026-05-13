@@ -1,0 +1,1046 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RackyWeb Academy — Enter The Future</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- Scroll progress -->
+<div id="scroll-progress"></div>
+
+<!-- Particles canvas -->
+<canvas id="particles-canvas"></canvas>
+
+<!-- Mouse glow -->
+<div id="mouse-glow"></div>
+
+<!-- ============================================================
+     NAVBAR
+     ============================================================ -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">RackyWeb<span style="color:var(--sun-coral)">.</span></a>
+  <div class="nav-links">
+    <a href="#innovation" class="nav-link">Innovation</a>
+    <a href="#academy"    class="nav-link">Academy</a>
+    <a href="#creator"    class="nav-link">Creators</a>
+    <a href="#templates"  class="nav-link">Templates</a>
+    <a href="#labs"       class="nav-link">Labs</a>
+    <a href="#startup"    class="nav-link">Launch</a>
+    <a href="#events"     class="nav-link">Events</a>
+    <a href="#academy"    class="nav-link nav-cta">Enter Academy →</a>
+  </div>
+  <div class="hamburger" onclick="toggleMenu()" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section id="hero">
+  <!-- Gold orbs -->
+  <div class="orb" style="width:550px;height:550px;background:rgba(245,200,66,0.1);top:-80px;left:-120px;animation-duration:14s;"></div>
+  <div class="orb" style="width:400px;height:400px;background:rgba(16,201,122,0.09);bottom:-60px;right:-80px;animation-duration:11s;"></div>
+  <div class="orb" style="width:280px;height:280px;background:rgba(247,65,143,0.08);top:40%;left:60%;animation-duration:9s;"></div>
+
+  <div class="hero-inner" style="position:relative;z-index:2;">
+    <div class="hero-eyebrow">
+      <div class="hero-blink"></div>
+      Futuristic Digital Ecosystem · Est. 2024
+    </div>
+    <h1 class="hero-title">
+      The Future<br>
+      <span class="hero-title-line2">Is Yours To Build</span>
+    </h1>
+    <p class="hero-sub">
+      Enter a premium digital universe where learning meets innovation. Master AI, build products, launch startups, and collaborate with the brightest minds on the planet.
+    </p>
+    <div class="hero-actions">
+      <a href="#academy"    class="btn btn-gold btn-pulse" onclick="ripple(event)">🚀 Launch Your Journey</a>
+      <a href="#innovation" class="btn btn-ghost"          onclick="ripple(event)">✦ Explore The Future</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num" data-counter="48000" data-suffix="K+">0</div>
+        <div class="hero-stat-label">Students Enrolled</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-counter="2400" data-suffix="">0</div>
+        <div class="hero-stat-label">Premium Templates</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-counter="190" data-suffix="+">0</div>
+        <div class="hero-stat-label">Countries</div>
+      </div>
+      <div>
+        <div class="hero-stat-num" data-counter="99" data-suffix="%">0</div>
+        <div class="hero-stat-label">Satisfaction Rate</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Orbital rings visual -->
+  <div class="hero-visual">
+    <div class="hero-ring hr1"></div>
+    <div class="hero-ring hr2"></div>
+    <div class="hero-ring hr3"></div>
+    <div class="hero-orb"></div>
+    <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:52px;z-index:2;">🌐</div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE BAND
+     ============================================================ -->
+<div class="marquee-band">
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <div class="marquee-item"><span class="marquee-dot"></span>AI-Powered Learning</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Premium Gold Templates</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Emerald Creator Economy</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Sunset UI Kits</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Global Community</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Startup Launcher</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>48K+ Students</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Web3 Ready</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>AI-Powered Learning</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Premium Gold Templates</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Emerald Creator Economy</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Sunset UI Kits</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Global Community</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Startup Launcher</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>48K+ Students</div>
+      <div class="marquee-item"><span class="marquee-dot"></span>Web3 Ready</div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     01 · INNOVATION HUB
+     ============================================================ -->
+<section id="innovation">
+  <div class="orb" style="width:420px;height:420px;background:rgba(16,201,122,0.07);top:40%;right:0;animation-duration:13s;"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:70px;" class="reveal">
+        <div class="section-tag">01 · Innovation Hub</div>
+        <h2 class="section-title">AI Tools That<br><span class="gt-em">Redefine Possible</span></h2>
+        <p class="section-desc" style="margin:0 auto;">Cutting-edge AI tools built for creators, developers, and visionaries who refuse to be ordinary.</p>
+      </div>
+
+      <div class="ai-cards">
+        <div class="ai-card reveal" style="transition-delay:.05s;">
+          <div class="ai-card-glow" style="background:var(--em);"></div>
+          <div class="ai-card-icon" style="background:var(--em-dim);border:1px solid var(--em-border);">🤖</div>
+          <div class="ai-card-title">AI Code Generator</div>
+          <div class="ai-card-desc">Generate production-ready code in any language, instantly. React, Python, Go, and 40+ more.</div>
+          <div class="ai-card-tag" style="background:var(--em-dim);color:var(--em);border:1px solid var(--em-border);">🟢 LIVE</div>
+        </div>
+        <div class="ai-card reveal" style="transition-delay:.1s;">
+          <div class="ai-card-glow" style="background:var(--gold);"></div>
+          <div class="ai-card-icon" style="background:var(--gold-dim);border:1px solid var(--gold-border);">🎨</div>
+          <div class="ai-card-title">UI Vision AI</div>
+          <div class="ai-card-desc">Transform rough sketches into pixel-perfect UI components powered by our design intelligence.</div>
+          <div class="ai-card-tag" style="background:var(--gold-dim);color:var(--gold);border:1px solid var(--gold-border);">🔮 BETA</div>
+        </div>
+        <div class="ai-card reveal" style="transition-delay:.15s;">
+          <div class="ai-card-glow" style="background:var(--sun-rose);"></div>
+          <div class="ai-card-icon" style="background:rgba(247,65,143,0.1);border:1px solid rgba(247,65,143,0.2);">⚡</div>
+          <div class="ai-card-title">Launch Accelerator</div>
+          <div class="ai-card-desc">Idea to deployed product in 24 hours. Our AI pipeline handles everything end-to-end.</div>
+          <div class="ai-card-tag" style="background:rgba(247,65,143,0.08);color:var(--sun-rose);border:1px solid rgba(247,65,143,0.2);">🔥 HOT</div>
+        </div>
+        <div class="ai-card reveal" style="transition-delay:.2s;">
+          <div class="ai-card-glow" style="background:var(--sun-amber);"></div>
+          <div class="ai-card-icon" style="background:rgba(251,146,60,0.1);border:1px solid rgba(251,146,60,0.2);">📊</div>
+          <div class="ai-card-title">Analytics Oracle</div>
+          <div class="ai-card-desc">ML-powered predictive analytics. Know what your users want before they do.</div>
+          <div class="ai-card-tag" style="background:rgba(251,146,60,0.08);color:var(--sun-amber);border:1px solid rgba(251,146,60,0.2);">📈 NEW</div>
+        </div>
+        <div class="ai-card reveal" style="transition-delay:.25s;">
+          <div class="ai-card-glow" style="background:var(--em);"></div>
+          <div class="ai-card-icon" style="background:var(--em-dim);border:1px solid var(--em-border);">🌐</div>
+          <div class="ai-card-title">SEO Turbo Engine</div>
+          <div class="ai-card-desc">Dominate search rankings with AI-generated content strategies built for 2025 algorithms.</div>
+          <div class="ai-card-tag" style="background:var(--em-dim);color:var(--em);border:1px solid var(--em-border);">⬆ TRENDING</div>
+        </div>
+        <div class="ai-card reveal" style="transition-delay:.3s;">
+          <div class="ai-card-glow" style="background:var(--sun-violet);"></div>
+          <div class="ai-card-icon" style="background:rgba(155,89,245,0.1);border:1px solid rgba(155,89,245,0.2);">💬</div>
+          <div class="ai-card-title">Conversation Forge</div>
+          <div class="ai-card-desc">Build intelligent chatbots and AI assistants without a single line of code.</div>
+          <div class="ai-card-tag" style="background:rgba(155,89,245,0.08);color:var(--sun-violet);border:1px solid rgba(155,89,245,0.2);">✦ PRO</div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:52px;" class="reveal">
+        <a href="#" class="btn btn-em" onclick="ripple(event)">Generate With AI →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     02 · STATISTICS
+     ============================================================ -->
+<section id="statistics">
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:52px;">
+        <div class="section-tag">02 · Live Stats</div>
+        <h2 class="section-title" style="font-size:clamp(28px,4vw,54px);">Numbers That<br><span class="gt-gold">Tell The Story</span></h2>
+      </div>
+      <div class="stats-grid reveal">
+        <div class="stat-block">
+          <div class="stat-icon">👩‍💻</div>
+          <div class="stat-number gt-gold" data-counter="48291" data-suffix="+">0</div>
+          <div class="stat-label">Students Enrolled</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-icon">📦</div>
+          <div class="stat-number gt-em" data-counter="2483" data-suffix="">0</div>
+          <div class="stat-label">Templates Downloaded</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-icon">🤖</div>
+          <div class="stat-number gt-sunset" data-counter="1200000" data-suffix="+">0</div>
+          <div class="stat-label">AI Generations</div>
+        </div>
+        <div class="stat-block">
+          <div class="stat-icon">🚀</div>
+          <div class="stat-number gt-prism" data-counter="3847" data-suffix="">0</div>
+          <div class="stat-label">Projects Launched</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     03 · EXPLORE ACADEMY
+     ============================================================ -->
+<section id="academy">
+  <div class="orb" style="width:500px;height:500px;background:rgba(16,201,122,0.08);top:0;right:0;animation-duration:16s;"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="academy-layout">
+        <div class="reveal-left">
+          <div class="section-tag">03 · Explore Academy</div>
+          <h2 class="section-title">Your Learning<br><span class="gt-em">Superpower Starts Here</span></h2>
+          <p class="section-desc">Follow structured roadmaps, conquer skill trees, and unlock your full potential with our immersive journeys.</p>
+          <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+            <a href="#" class="btn btn-em"    onclick="ripple(event)">🎓 Enter The Academy</a>
+            <a href="#" class="btn btn-ghost" onclick="ripple(event)">View All Paths</a>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <div class="roadmap-paths">
+            <div class="path-card">
+              <div class="path-label">PATH · 001</div>
+              <div class="path-name">Full-Stack Developer</div>
+              <div class="path-desc">HTML through React, Node, and cloud deployment. Zero to hero.</div>
+              <div class="path-dots">
+                <div class="path-dot" style="background:var(--em);"></div>
+                <div class="path-dot" style="background:var(--em);"></div>
+                <div class="path-dot" style="background:var(--em);"></div>
+                <div class="path-dot" style="background:var(--em);opacity:.3;"></div>
+                <div class="path-dot" style="background:var(--em);opacity:.3;"></div>
+              </div>
+            </div>
+            <div class="path-card">
+              <div class="path-label">PATH · 002</div>
+              <div class="path-name">AI & Machine Learning</div>
+              <div class="path-desc">PyTorch, transformers, fine-tuning, and deploying your first AI model.</div>
+              <div class="path-dots">
+                <div class="path-dot" style="background:var(--gold);"></div>
+                <div class="path-dot" style="background:var(--gold);"></div>
+                <div class="path-dot" style="background:var(--gold);opacity:.3;"></div>
+                <div class="path-dot" style="background:var(--gold);opacity:.3;"></div>
+                <div class="path-dot" style="background:var(--gold);opacity:.3;"></div>
+              </div>
+            </div>
+            <div class="path-card">
+              <div class="path-label">PATH · 003</div>
+              <div class="path-name">UI/UX & Product Design</div>
+              <div class="path-desc">Figma, motion design, product thinking, and building products that delight.</div>
+              <div class="path-dots">
+                <div class="path-dot" style="background:var(--sun-rose);"></div>
+                <div class="path-dot" style="background:var(--sun-rose);"></div>
+                <div class="path-dot" style="background:var(--sun-rose);"></div>
+                <div class="path-dot" style="background:var(--sun-rose);"></div>
+                <div class="path-dot" style="background:var(--sun-rose);opacity:.3;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Tree -->
+      <div style="margin-top:70px;" class="reveal">
+        <h3 style="font-family:var(--font-display);font-size:22px;font-weight:700;color:#fff;margin-bottom:24px;">⚡ Skill Tree · Web Fundamentals</h3>
+        <div class="skill-tree">
+          <div class="skill-node">
+            <div class="skill-node-icon" style="background:rgba(16,201,122,0.12);">🏁</div>
+            <div class="skill-node-info">
+              <div class="skill-node-name">HTML & CSS Mastery</div>
+              <div class="skill-node-level">Level 1 · Foundation</div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:var(--em);" data-fill="95"></div></div>
+            </div>
+            <span class="inline-pill">95%</span>
+          </div>
+          <div class="skill-connector"></div>
+          <div class="skill-node">
+            <div class="skill-node-icon" style="background:rgba(245,200,66,0.12);">⚡</div>
+            <div class="skill-node-info">
+              <div class="skill-node-name">JavaScript & ES2025</div>
+              <div class="skill-node-level">Level 2 · Core</div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:var(--gold);" data-fill="82"></div></div>
+            </div>
+            <span class="inline-pill">82%</span>
+          </div>
+          <div class="skill-connector"></div>
+          <div class="skill-node">
+            <div class="skill-node-icon" style="background:rgba(56,189,248,0.12);">⚛️</div>
+            <div class="skill-node-info">
+              <div class="skill-node-name">React & Next.js</div>
+              <div class="skill-node-level">Level 3 · Framework</div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:var(--sun-sky);" data-fill="70"></div></div>
+            </div>
+            <span class="inline-pill">70%</span>
+          </div>
+          <div class="skill-connector"></div>
+          <div class="skill-node">
+            <div class="skill-node-icon" style="background:rgba(155,89,245,0.12);">🚀</div>
+            <div class="skill-node-info">
+              <div class="skill-node-name">Full-Stack Deployment</div>
+              <div class="skill-node-level">Level 4 · Advanced</div>
+              <div class="skill-bar"><div class="skill-fill" style="width:0%;background:var(--sun-violet);" data-fill="45"></div></div>
+            </div>
+            <span class="inline-pill">45%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     04 · CREATOR SPACE
+     ============================================================ -->
+<section id="creator">
+  <div class="orb" style="width:500px;height:500px;background:rgba(247,65,143,0.07);bottom:0;left:0;animation-duration:12s;"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="creator-header">
+        <div class="reveal-left">
+          <div class="section-tag">04 · Creator Space</div>
+          <h2 class="section-title">The Creator<br><span class="gt-sunset">Economy Lives Here</span></h2>
+        </div>
+        <div class="reveal-right">
+          <p style="font-size:15px;color:var(--muted);max-width:320px;line-height:1.75;">Upload, sell, and monetize your digital products to a global audience of 48,000+ buyers.</p>
+          <div style="margin-top:20px;">
+            <a href="#" class="btn btn-sunset" onclick="ripple(event)">Join The Creator Network</a>
+          </div>
+        </div>
+      </div>
+      <div class="creator-grid">
+        <div class="creator-card reveal" style="transition-delay:.05s;">
+          <div class="creator-thumb" style="background:linear-gradient(135deg,rgba(245,200,66,0.2),rgba(251,146,60,0.12));">
+            <div class="creator-badge" style="background:rgba(245,200,66,0.25);color:var(--gold);">TRENDING</div>🌊
+          </div>
+          <div class="creator-info">
+            <div class="creator-name">Alex Rivera</div>
+            <div class="creator-role" style="color:var(--gold);">UI/UX Designer</div>
+            <div class="creator-stats-row"><span>⭐ 4.9</span><span>📦 247 sales</span></div>
+          </div>
+        </div>
+        <div class="creator-card reveal" style="transition-delay:.1s;">
+          <div class="creator-thumb" style="background:linear-gradient(135deg,rgba(247,65,143,0.2),rgba(155,89,245,0.12));">
+            <div class="creator-badge" style="background:rgba(247,65,143,0.25);color:var(--sun-rose);">TOP SELLER</div>🔥
+          </div>
+          <div class="creator-info">
+            <div class="creator-name">Maya Chen</div>
+            <div class="creator-role" style="color:var(--sun-rose);">AI Developer</div>
+            <div class="creator-stats-row"><span>⭐ 5.0</span><span>📦 1.2K sales</span></div>
+          </div>
+        </div>
+        <div class="creator-card reveal" style="transition-delay:.15s;">
+          <div class="creator-thumb" style="background:linear-gradient(135deg,rgba(16,201,122,0.2),rgba(56,189,248,0.12));">
+            <div class="creator-badge" style="background:rgba(16,201,122,0.25);color:var(--em);">RISING</div>⚡
+          </div>
+          <div class="creator-info">
+            <div class="creator-name">Jordan Lee</div>
+            <div class="creator-role" style="color:var(--em);">Full-Stack Dev</div>
+            <div class="creator-stats-row"><span>⭐ 4.8</span><span>📦 89 sales</span></div>
+          </div>
+        </div>
+        <div class="creator-card reveal" style="transition-delay:.2s;">
+          <div class="creator-thumb" style="background:linear-gradient(135deg,rgba(155,89,245,0.2),rgba(247,65,143,0.12));">
+            <div class="creator-badge" style="background:rgba(155,89,245,0.25);color:var(--sun-violet);">PRO</div>🎭
+          </div>
+          <div class="creator-info">
+            <div class="creator-name">Priya Sharma</div>
+            <div class="creator-role" style="color:var(--sun-violet);">Brand Designer</div>
+            <div class="creator-stats-row"><span>⭐ 4.9</span><span>📦 534 sales</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     05 · TEMPLATES VAULT
+     ============================================================ -->
+<section id="templates">
+  <div class="orb" style="width:600px;height:600px;background:rgba(16,201,122,0.05);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:52px;">
+        <div class="section-tag">05 · Premium Vault</div>
+        <h2 class="section-title">Templates That<br><span class="gt-em">Launch Businesses</span></h2>
+        <p class="section-desc" style="margin:0 auto;">2,400+ premium templates for SaaS, portfolios, agencies — all pixel-perfect and developer-ready.</p>
+      </div>
+      <div class="filter-bar reveal">
+        <button class="filter-btn active" onclick="filterTemplates(this,'all')">All</button>
+        <button class="filter-btn" onclick="filterTemplates(this,'saas')">SaaS</button>
+        <button class="filter-btn" onclick="filterTemplates(this,'portfolio')">Portfolio</button>
+        <button class="filter-btn" onclick="filterTemplates(this,'agency')">Agency</button>
+        <button class="filter-btn" onclick="filterTemplates(this,'ecom')">E-commerce</button>
+        <button class="filter-btn" onclick="filterTemplates(this,'landing')">Landing Pages</button>
+      </div>
+      <div class="templates-grid" id="templates-grid">
+        <div class="template-card reveal" data-cat="saas">
+          <div class="template-preview" style="background:linear-gradient(135deg,rgba(16,201,122,0.18),rgba(56,189,248,0.12));">
+            <span style="font-size:58px;position:relative;z-index:1;">🚀</span>
+            <div class="template-overlay">
+              <a href="#" class="btn btn-gold"  style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Preview</a>
+              <a href="#" class="btn btn-ghost" style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Buy</a>
+            </div>
+          </div>
+          <div class="template-info">
+            <div class="template-name">NovaDash SaaS</div>
+            <div class="template-cat">SaaS · Dashboard · Dark</div>
+            <div class="template-price gt-gold">$49</div>
+          </div>
+        </div>
+        <div class="template-card reveal" data-cat="portfolio" style="transition-delay:.05s;">
+          <div class="template-preview" style="background:linear-gradient(135deg,rgba(245,200,66,0.18),rgba(251,146,60,0.12));">
+            <span style="font-size:58px;position:relative;z-index:1;">🎨</span>
+            <div class="template-overlay">
+              <a href="#" class="btn btn-gold"  style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Preview</a>
+              <a href="#" class="btn btn-ghost" style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Buy</a>
+            </div>
+          </div>
+          <div class="template-info">
+            <div class="template-name">Luxe Portfolio</div>
+            <div class="template-cat">Portfolio · Minimal · Animated</div>
+            <div class="template-price gt-sunset">$39</div>
+          </div>
+        </div>
+        <div class="template-card reveal" data-cat="agency" style="transition-delay:.1s;">
+          <div class="template-preview" style="background:linear-gradient(135deg,rgba(247,65,143,0.18),rgba(155,89,245,0.12));">
+            <span style="font-size:58px;position:relative;z-index:1;">⚡</span>
+            <div class="template-overlay">
+              <a href="#" class="btn btn-gold"  style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Preview</a>
+              <a href="#" class="btn btn-ghost" style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Buy</a>
+            </div>
+          </div>
+          <div class="template-info">
+            <div class="template-name">Apex Agency</div>
+            <div class="template-cat">Agency · Bold · Interactive</div>
+            <div class="template-price gt-em">$59</div>
+          </div>
+        </div>
+        <div class="template-card reveal" data-cat="ecom" style="transition-delay:.15s;">
+          <div class="template-preview" style="background:linear-gradient(135deg,rgba(245,200,66,0.15),rgba(16,201,122,0.10));">
+            <span style="font-size:58px;position:relative;z-index:1;">🛒</span>
+            <div class="template-overlay">
+              <a href="#" class="btn btn-gold"  style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Preview</a>
+              <a href="#" class="btn btn-ghost" style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Buy</a>
+            </div>
+          </div>
+          <div class="template-info">
+            <div class="template-name">Orion Store</div>
+            <div class="template-cat">E-commerce · Luxury · Dark</div>
+            <div class="template-price gt-gold">$69</div>
+          </div>
+        </div>
+        <div class="template-card reveal" data-cat="landing" style="transition-delay:.2s;">
+          <div class="template-preview" style="background:linear-gradient(135deg,rgba(56,189,248,0.18),rgba(16,201,122,0.12));">
+            <span style="font-size:58px;position:relative;z-index:1;">🌊</span>
+            <div class="template-overlay">
+              <a href="#" class="btn btn-gold"  style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Preview</a>
+              <a href="#" class="btn btn-ghost" style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Buy</a>
+            </div>
+          </div>
+          <div class="template-info">
+            <div class="template-name">Zenith Landing</div>
+            <div class="template-cat">Landing · Conversion · Clean</div>
+            <div class="template-price gt-sunset">$29</div>
+          </div>
+        </div>
+        <div class="template-card reveal" data-cat="saas" style="transition-delay:.25s;">
+          <div class="template-preview" style="background:linear-gradient(135deg,rgba(155,89,245,0.18),rgba(247,65,143,0.12));">
+            <span style="font-size:58px;position:relative;z-index:1;">🔮</span>
+            <div class="template-overlay">
+              <a href="#" class="btn btn-gold"  style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Preview</a>
+              <a href="#" class="btn btn-ghost" style="padding:10px 18px;font-size:12px;" onclick="ripple(event)">Buy</a>
+            </div>
+          </div>
+          <div class="template-info">
+            <div class="template-name">Nebula AI Platform</div>
+            <div class="template-cat">SaaS · AI · Futuristic</div>
+            <div class="template-price gt-em">$89</div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:44px;" class="reveal">
+        <a href="#" class="btn btn-gold btn-pulse" onclick="ripple(event)">📦 Download Premium Assets</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     06 · RACKYWEB LABS
+     ============================================================ -->
+<section id="labs">
+  <div class="orb" style="width:400px;height:400px;background:rgba(56,189,248,0.07);top:20%;left:0;animation-duration:14s;"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:62px;">
+        <div class="section-tag">06 · RackyWeb Labs</div>
+        <h2 class="section-title">Where The<br><span class="gt-gold">Future Is Built</span></h2>
+        <p class="section-desc" style="margin:0 auto;">Experimental AI projects, open research, and the bleeding edge of web technology.</p>
+      </div>
+      <div class="labs-bento">
+        <div class="lab-cell lab-cell-wide reveal">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:20px;">
+            <div>
+              <div class="lab-icon">🧬</div>
+              <div class="lab-title">Project Genesis</div>
+              <div class="lab-desc">Our flagship AI that autonomously builds complete web applications from a single sentence.</div>
+            </div>
+            <div class="inline-pill" style="flex-shrink:0;margin-top:8px;background:var(--em-dim);border-color:var(--em-border);color:var(--em);">🔬 ACTIVE</div>
+          </div>
+          <div class="code-snippet">
+            <span class="kw">const</span> <span class="fn">genesis</span> = <span class="kw">await</span> AI.<span class="fn">build</span>(<span class="str">"A SaaS dashboard for project management"</span>);<br>
+            <span class="kw">await</span> genesis.<span class="fn">deploy</span>(); <span style="color:var(--muted);">// Done in 3.2s ✓</span>
+            <span class="typing-cursor">|</span>
+          </div>
+        </div>
+        <div class="lab-cell lab-cell-tall reveal" style="transition-delay:.1s;">
+          <div class="lab-icon">🌐</div>
+          <div class="lab-title">Web3 Mesh</div>
+          <div class="lab-desc">Decentralized content delivery protocol. Your data, your rules.</div>
+          <div style="margin-top:20px;">
+            <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;margin-bottom:8px;"><div style="height:100%;width:73%;background:linear-gradient(90deg,var(--em),var(--sun-sky));border-radius:3px;"></div></div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--muted);">Network: 73%</div>
+            <div style="height:6px;background:rgba(255,255,255,0.06);border-radius:3px;overflow:hidden;margin-top:12px;margin-bottom:8px;"><div style="height:100%;width:45%;background:linear-gradient(90deg,var(--gold),var(--sun-coral));border-radius:3px;"></div></div>
+            <div style="font-family:var(--font-mono);font-size:10px;color:var(--muted);">Latency: 12ms</div>
+          </div>
+        </div>
+        <div class="lab-cell reveal" style="transition-delay:.15s;">
+          <div class="lab-icon">⚡</div>
+          <div class="lab-title">Quantum UI</div>
+          <div class="lab-desc">Components adapting to user behaviour in real-time.</div>
+          <div style="margin-top:10px;font-family:var(--font-mono);font-size:11px;color:var(--gold);">↑ 240% engagement boost</div>
+        </div>
+        <div class="lab-cell reveal" style="transition-delay:.2s;">
+          <div class="lab-icon">🎨</div>
+          <div class="lab-title">Neural Palette</div>
+          <div class="lab-desc">AI generates design systems from brand DNA in under 2 seconds.</div>
+          <div style="display:flex;gap:8px;margin-top:16px;">
+            <div style="width:28px;height:28px;border-radius:6px;background:var(--gold);"></div>
+            <div style="width:28px;height:28px;border-radius:6px;background:var(--em);"></div>
+            <div style="width:28px;height:28px;border-radius:6px;background:var(--sun-rose);"></div>
+            <div style="width:28px;height:28px;border-radius:6px;background:var(--sun-violet);"></div>
+            <div style="width:28px;height:28px;border-radius:6px;background:var(--sun-sky);"></div>
+          </div>
+        </div>
+        <div class="lab-cell lab-cell-wide reveal" style="transition-delay:.25s;">
+          <div style="display:flex;align-items:center;gap:22px;">
+            <div>
+              <div class="lab-icon">🏗️</div>
+              <div class="lab-title">Open Research Lab</div>
+              <div class="lab-desc">200+ researchers contributing to our open-source AI benchmarks.</div>
+            </div>
+            <a href="#" class="btn btn-glass" style="flex-shrink:0;" onclick="ripple(event)">Contribute →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     07 · COMMUNITY
+     ============================================================ -->
+<section id="community">
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:52px;">
+        <div class="section-tag">07 · Community Zone</div>
+        <h2 class="section-title">Built By Builders,<br><span class="gt-em">For Builders</span></h2>
+        <p class="section-desc" style="margin:0 auto;">A thriving ecosystem of developers, designers, and innovators from 190+ countries.</p>
+      </div>
+      <div class="community-cols">
+        <div>
+          <div class="leaderboard reveal-left">
+            <div class="lb-header">
+              <div class="lb-title">🏆 Top Contributors</div>
+              <div class="inline-pill" style="border-color:var(--em-border);color:var(--em);">This Month</div>
+            </div>
+            <div class="lb-row">
+              <div class="lb-rank gt-gold">01</div>
+              <div class="lb-avatar" style="background:rgba(245,200,66,0.12);">👩‍💻</div>
+              <div class="lb-info"><div class="lb-name">Maya Chen</div><div class="lb-role">AI Developer</div></div>
+              <div class="lb-score gt-gold">9,840</div>
+            </div>
+            <div class="lb-row">
+              <div class="lb-rank" style="color:var(--muted);">02</div>
+              <div class="lb-avatar" style="background:rgba(16,201,122,0.12);">👨‍🎨</div>
+              <div class="lb-info"><div class="lb-name">Alex Rivera</div><div class="lb-role">Designer</div></div>
+              <div class="lb-score gt-em">7,210</div>
+            </div>
+            <div class="lb-row">
+              <div class="lb-rank" style="color:var(--muted);">03</div>
+              <div class="lb-avatar" style="background:rgba(247,65,143,0.12);">🧑‍💻</div>
+              <div class="lb-info"><div class="lb-name">Jordan Lee</div><div class="lb-role">Full-Stack Dev</div></div>
+              <div class="lb-score gt-sunset">5,670</div>
+            </div>
+            <div class="lb-row">
+              <div class="lb-rank" style="color:var(--muted);">04</div>
+              <div class="lb-avatar" style="background:rgba(155,89,245,0.12);">👩‍🔬</div>
+              <div class="lb-info"><div class="lb-name">Priya Sharma</div><div class="lb-role">Researcher</div></div>
+              <div class="lb-score" style="color:var(--sun-violet);">4,920</div>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <h3 style="font-family:var(--font-display);font-size:18px;font-weight:700;color:#fff;margin-bottom:20px;">⚡ Live Activity Feed</h3>
+          <div class="activity-feed" id="activity-feed">
+            <div class="activity-item">
+              <div class="activity-avatar" style="background:rgba(245,200,66,0.12);">🎓</div>
+              <div><div class="activity-text"><strong>Sarah K.</strong> completed the React Masterclass</div><div class="activity-time">2 min ago</div></div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-avatar" style="background:rgba(16,201,122,0.12);">🚀</div>
+              <div><div class="activity-text"><strong>DevTeam Alpha</strong> launched their SaaS product</div><div class="activity-time">8 min ago</div></div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-avatar" style="background:rgba(247,65,143,0.12);">💰</div>
+              <div><div class="activity-text"><strong>Marcus T.</strong> made their first $1,000</div><div class="activity-time">15 min ago</div></div>
+            </div>
+            <div class="activity-item">
+              <div class="activity-avatar" style="background:rgba(155,89,245,0.12);">⭐</div>
+              <div><div class="activity-text"><strong>UI Kit Pro</strong> received 5-star review</div><div class="activity-time">23 min ago</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     08 · STARTUP LAUNCH
+     ============================================================ -->
+<section id="startup">
+  <div class="orb" style="width:500px;height:500px;background:rgba(245,200,66,0.07);top:20%;right:0;animation-duration:15s;"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;">
+        <div class="section-tag">08 · Startup Launch</div>
+        <h2 class="section-title">Zero to Launch.<br><span class="gt-gold">Seriously Fast.</span></h2>
+        <p class="section-desc" style="margin:0 auto;">Everything your startup needs — design, development, branding, and marketing bundled together.</p>
+      </div>
+      <div class="packages">
+        <div class="pkg-card reveal" style="transition-delay:.05s;">
+          <div class="pkg-icon">🌱</div>
+          <div class="pkg-name">Starter</div>
+          <div class="pkg-desc">Perfect for solo founders and MVPs. Get online fast and start validating.</div>
+          <div class="pkg-price gt-em">$497 <span>/ project</span></div>
+          <ul class="pkg-features">
+            <li>5-page website</li><li>Brand identity kit</li><li>SEO foundation</li><li>1 month support</li><li>Mobile responsive</li>
+          </ul>
+          <a href="#" class="btn btn-ghost" style="width:100%;justify-content:center;" onclick="ripple(event)">Get Started →</a>
+        </div>
+        <div class="pkg-card featured reveal" style="transition-delay:.1s;">
+          <div class="pkg-badge">MOST POPULAR</div>
+          <div class="pkg-icon">🚀</div>
+          <div class="pkg-name">Growth</div>
+          <div class="pkg-desc">The full startup package. Launch with confidence and a competitive edge.</div>
+          <div class="pkg-price gt-gold">$1,997 <span>/ project</span></div>
+          <ul class="pkg-features">
+            <li>Full website + web app</li><li>Complete brand system</li><li>Marketing funnel setup</li><li>Launch strategy</li><li>3 months support</li><li>Performance analytics</li>
+          </ul>
+          <a href="#" class="btn btn-gold btn-pulse" style="width:100%;justify-content:center;" onclick="ripple(event)">Launch Your Business →</a>
+        </div>
+        <div class="pkg-card reveal" style="transition-delay:.15s;">
+          <div class="pkg-icon">🏢</div>
+          <div class="pkg-name">Enterprise</div>
+          <div class="pkg-desc">Full-scale digital transformation for businesses ready to dominate.</div>
+          <div class="pkg-price gt-sunset">Custom <span>/ quote</span></div>
+          <ul class="pkg-features">
+            <li>Custom platform build</li><li>Enterprise branding</li><li>Dedicated team</li><li>Priority 24/7 support</li><li>Custom AI integrations</li><li>White-label options</li>
+          </ul>
+          <a href="#" class="btn btn-ghost" style="width:100%;justify-content:center;" onclick="ripple(event)">Contact Us →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     09 · FUTURE TECH
+     ============================================================ -->
+<section id="future-tech">
+  <div class="orb" style="width:700px;height:700px;background:rgba(155,89,245,0.06);top:50%;left:50%;transform:translate(-50%,-50%);"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:62px;">
+        <div class="section-tag">09 · Future Tech Showcase</div>
+        <h2 class="section-title">Tomorrow's Technology.<br><span class="gt-sunset">Available Today.</span></h2>
+        <p class="section-desc" style="margin:0 auto;">Explore our most forward-looking innovations and experimental interfaces.</p>
+      </div>
+      <div class="future-grid">
+        <div class="future-card reveal">
+          <div class="future-card-bg" style="background:radial-gradient(circle at 50% 50%,rgba(16,201,122,0.4),rgba(0,0,0,0));"></div>
+          <div class="holo-ui">
+            <div class="holo-ring" style="width:120px;height:120px;border-color:rgba(16,201,122,0.35);animation-duration:4s;"></div>
+            <div class="holo-ring" style="width:88px;height:88px;border-color:rgba(245,200,66,0.3);animation-duration:3s;animation-direction:reverse;"></div>
+            <div class="holo-ring" style="width:58px;height:58px;border-color:rgba(247,65,143,0.28);animation-duration:2.5s;"></div>
+            <div style="position:absolute;font-size:30px;z-index:2;">🌐</div>
+          </div>
+          <div class="future-card-content">
+            <div class="future-card-num">CONCEPT · 01</div>
+            <div class="future-card-title">Holographic Navigation</div>
+            <div class="future-card-desc">3D spatial interfaces that respond to depth of field for truly immersive browsing.</div>
+          </div>
+        </div>
+        <div class="future-card reveal" style="transition-delay:.1s;">
+          <div class="future-card-bg" style="background:radial-gradient(circle at 50% 50%,rgba(245,200,66,0.35),rgba(0,0,0,0));"></div>
+          <div style="padding:36px;display:flex;flex-direction:column;gap:10px;margin-bottom:-20px;">
+            <div style="height:8px;background:rgba(245,200,66,0.15);border-radius:4px;overflow:hidden;"><div style="height:100%;width:78%;background:linear-gradient(90deg,var(--gold),var(--sun-coral));animation:slide-r 3s ease-in-out infinite alternate;"></div></div>
+            <div style="height:8px;background:rgba(245,200,66,0.15);border-radius:4px;overflow:hidden;"><div style="height:100%;width:45%;background:linear-gradient(90deg,var(--sun-rose),var(--sun-violet));animation:slide-r 2s ease-in-out .5s infinite alternate;"></div></div>
+            <div style="height:8px;background:rgba(245,200,66,0.15);border-radius:4px;overflow:hidden;"><div style="height:100%;width:62%;background:linear-gradient(90deg,var(--em),var(--sun-sky));animation:slide-r 2.5s ease-in-out 1s infinite alternate;"></div></div>
+          </div>
+          <div class="future-card-content">
+            <div class="future-card-num">CONCEPT · 02</div>
+            <div class="future-card-title">Neural Dashboard</div>
+            <div class="future-card-desc">Real-time AI metrics in a dynamic, self-organising interface that adapts to your workflow.</div>
+          </div>
+        </div>
+        <div class="future-card reveal" style="transition-delay:.2s;">
+          <div class="future-card-bg" style="background:radial-gradient(circle at 50% 50%,rgba(247,65,143,0.35),rgba(0,0,0,0));"></div>
+          <div style="padding:36px;display:flex;align-items:center;justify-content:center;min-height:140px;">
+            <div style="position:relative;width:120px;height:120px;">
+              <div style="position:absolute;inset:0;border-radius:50%;border:2px solid rgba(247,65,143,0.35);animation:ring-spin 6s linear infinite;"></div>
+              <div style="position:absolute;inset:16px;border-radius:50%;border:2px solid rgba(245,200,66,0.3);animation:ring-spin 4s linear reverse infinite;"></div>
+              <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:36px;">🔥</div>
+            </div>
+          </div>
+          <div class="future-card-content">
+            <div class="future-card-num">CONCEPT · 03</div>
+            <div class="future-card-title">Adaptive AI Agents</div>
+            <div class="future-card-desc">Autonomous digital agents that handle your workflow and execute complex tasks end-to-end.</div>
+          </div>
+        </div>
+        <div class="future-card reveal" style="transition-delay:.3s;">
+          <div class="future-card-bg" style="background:radial-gradient(circle at 50% 50%,rgba(16,201,122,0.35),rgba(0,0,0,0));"></div>
+          <div style="padding:36px;font-family:var(--font-mono);font-size:11px;line-height:1.9;color:var(--muted);min-height:140px;">
+            <div><span style="color:var(--em);">✓</span> <span style="color:var(--text);">Analysing market opportunity...</span></div>
+            <div><span style="color:var(--em);">✓</span> <span style="color:var(--text);">Generating business model...</span></div>
+            <div><span style="color:var(--em);">✓</span> <span style="color:var(--text);">Drafting pitch deck...</span></div>
+            <div><span style="color:var(--gold);">▶</span> Building MVP infrastructure<span class="typing-cursor">_</span></div>
+          </div>
+          <div class="future-card-content">
+            <div class="future-card-num">CONCEPT · 04</div>
+            <div class="future-card-title">Autonomous Startup Builder</div>
+            <div class="future-card-desc">Describe your startup idea and watch our AI build the business from market analysis to product.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<style>@keyframes slide-r { from { transform:scaleX(.6); } to { transform:scaleX(1); } } @keyframes ring-spin { from { transform:rotate(0); } to { transform:rotate(360deg); } }</style>
+
+<!-- ============================================================
+     10 · CAREERS
+     ============================================================ -->
+<section id="careers">
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:42px;flex-wrap:wrap;gap:22px;">
+        <div class="reveal-left">
+          <div class="section-tag">10 · Careers & Opportunities</div>
+          <h2 class="section-title">Your Next Big<br><span class="gt-gold">Opportunity Awaits</span></h2>
+        </div>
+        <div class="reveal-right">
+          <p style="font-size:15px;color:var(--muted);max-width:300px;line-height:1.75;">Remote-first. Mission-driven. World-class team.</p>
+        </div>
+      </div>
+      <div class="career-tabs reveal">
+        <button class="tab-btn active" onclick="switchTab(this)">🌍 Remote Jobs</button>
+        <button class="tab-btn" onclick="switchTab(this)">🎓 Internships</button>
+        <button class="tab-btn" onclick="switchTab(this)">💼 Freelance</button>
+        <button class="tab-btn" onclick="switchTab(this)">🤝 Collaborate</button>
+      </div>
+      <div class="jobs-list reveal">
+        <div class="job-item">
+          <div class="job-icon" style="background:rgba(16,201,122,0.12);">⚛️</div>
+          <div class="job-info"><div class="job-title">Senior Frontend Engineer</div><div class="job-meta">Remote · Full-time · $120K–$180K</div></div>
+          <div class="job-tags"><div class="job-tag" style="background:var(--em-dim);color:var(--em);">React</div><div class="job-tag" style="background:rgba(56,189,248,0.08);color:var(--sun-sky);">TypeScript</div></div>
+          <div class="job-action"><a href="#" class="btn btn-ghost" style="padding:8px 18px;font-size:12px;" onclick="ripple(event)">Apply →</a></div>
+        </div>
+        <div class="job-item">
+          <div class="job-icon" style="background:rgba(155,89,245,0.12);">🤖</div>
+          <div class="job-info"><div class="job-title">AI/ML Research Engineer</div><div class="job-meta">Remote · Full-time · $150K–$220K</div></div>
+          <div class="job-tags"><div class="job-tag" style="background:rgba(155,89,245,0.08);color:var(--sun-violet);">PyTorch</div><div class="job-tag" style="background:var(--em-dim);color:var(--em);">Python</div></div>
+          <div class="job-action"><a href="#" class="btn btn-ghost" style="padding:8px 18px;font-size:12px;" onclick="ripple(event)">Apply →</a></div>
+        </div>
+        <div class="job-item">
+          <div class="job-icon" style="background:rgba(247,65,143,0.12);">🎨</div>
+          <div class="job-info"><div class="job-title">Product Design Lead</div><div class="job-meta">Remote · Full-time · $100K–$150K</div></div>
+          <div class="job-tags"><div class="job-tag" style="background:rgba(247,65,143,0.08);color:var(--sun-rose);">Figma</div><div class="job-tag" style="background:var(--gold-dim);color:var(--gold);">Motion</div></div>
+          <div class="job-action"><a href="#" class="btn btn-ghost" style="padding:8px 18px;font-size:12px;" onclick="ripple(event)">Apply →</a></div>
+        </div>
+        <div class="job-item">
+          <div class="job-icon" style="background:rgba(245,200,66,0.12);">📈</div>
+          <div class="job-info"><div class="job-title">Growth Marketing Manager</div><div class="job-meta">Remote · Full-time · $80K–$120K</div></div>
+          <div class="job-tags"><div class="job-tag" style="background:var(--gold-dim);color:var(--gold);">SEO</div><div class="job-tag" style="background:var(--em-dim);color:var(--em);">Analytics</div></div>
+          <div class="job-action"><a href="#" class="btn btn-ghost" style="padding:8px 18px;font-size:12px;" onclick="ripple(event)">Apply →</a></div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:32px;" class="reveal">
+        <a href="#" class="btn btn-ghost" onclick="ripple(event)">View All Opportunities →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     11 · EVENTS
+     ============================================================ -->
+<section id="events">
+  <div class="orb" style="width:500px;height:500px;background:rgba(247,65,143,0.07);bottom:0;right:0;animation-duration:13s;"></div>
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;">
+        <div class="section-tag">11 · Events & Webinars</div>
+        <h2 class="section-title">Level Up Live.<br><span class="gt-sunset">Every Week.</span></h2>
+        <p class="section-desc" style="margin:0 auto;">Live workshops, tech talks, and hackathons hosted by industry legends.</p>
+      </div>
+      <div class="events-grid">
+        <div class="event-card reveal">
+          <div class="event-thumb" style="background:linear-gradient(135deg,rgba(16,201,122,0.2),rgba(56,189,248,0.12));">🤖</div>
+          <div class="event-body">
+            <div class="event-date">MAY 18, 2026 · 6PM UTC</div>
+            <div class="event-title">Build Your First AI Agent</div>
+            <div class="event-desc">Live workshop. Build a real AI agent from scratch using modern LLM tools.</div>
+            <div class="countdown">
+              <div class="countdown-unit"><div class="countdown-num" id="cd1-d">06</div><div class="countdown-label">Days</div></div>
+              <div class="countdown-unit"><div class="countdown-num" id="cd1-h">14</div><div class="countdown-label">Hours</div></div>
+              <div class="countdown-unit"><div class="countdown-num" id="cd1-m">32</div><div class="countdown-label">Mins</div></div>
+              <div class="countdown-unit"><div class="countdown-num" id="cd1-s">00</div><div class="countdown-label">Secs</div></div>
+            </div>
+            <div class="event-footer" style="margin-top:16px;">
+              <div class="event-count">👥 847 registered</div>
+              <a href="#" class="btn btn-em" style="padding:8px 18px;font-size:12px;" onclick="ripple(event)">Register Free</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card reveal" style="transition-delay:.1s;">
+          <div class="event-thumb" style="background:linear-gradient(135deg,rgba(245,200,66,0.2),rgba(251,146,60,0.12));">🚀</div>
+          <div class="event-body">
+            <div class="event-date">MAY 25, 2026 · 4PM UTC</div>
+            <div class="event-title">Zero to SaaS in 48 Hours</div>
+            <div class="event-desc">The legendary RackyWeb hackathon. Build, ship, and win $10,000 in prizes.</div>
+            <div class="countdown">
+              <div class="countdown-unit"><div class="countdown-num">13</div><div class="countdown-label">Days</div></div>
+              <div class="countdown-unit"><div class="countdown-num">08</div><div class="countdown-label">Hours</div></div>
+              <div class="countdown-unit"><div class="countdown-num">45</div><div class="countdown-label">Mins</div></div>
+              <div class="countdown-unit"><div class="countdown-num">00</div><div class="countdown-label">Secs</div></div>
+            </div>
+            <div class="event-footer" style="margin-top:16px;">
+              <div class="event-count">👥 2.1K registered</div>
+              <a href="#" class="btn btn-gold" style="padding:8px 18px;font-size:12px;" onclick="ripple(event)">Join Hackathon</a>
+            </div>
+          </div>
+        </div>
+        <div class="event-card reveal" style="transition-delay:.2s;">
+          <div class="event-thumb" style="background:linear-gradient(135deg,rgba(247,65,143,0.2),rgba(155,89,245,0.12));">🎤</div>
+          <div class="event-body">
+            <div class="event-date">JUN 01, 2026 · 3PM UTC</div>
+            <div class="event-title">Founder Stories: $0 to $1M</div>
+            <div class="event-desc">Real founders share raw, unfiltered lessons from building their first profitable product.</div>
+            <div class="countdown">
+              <div class="countdown-unit"><div class="countdown-num">20</div><div class="countdown-label">Days</div></div>
+              <div class="countdown-unit"><div class="countdown-num">21</div><div class="countdown-label">Hours</div></div>
+              <div class="countdown-unit"><div class="countdown-num">00</div><div class="countdown-label">Mins</div></div>
+              <div class="countdown-unit"><div class="countdown-num">00</div><div class="countdown-label">Secs</div></div>
+            </div>
+            <div class="event-footer" style="margin-top:16px;">
+              <div class="event-count">👥 1.3K registered</div>
+              <a href="#" class="btn btn-sunset" style="padding:8px 18px;font-size:12px;" onclick="ripple(event)">Reserve Seat</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     TESTIMONIALS
+     ============================================================ -->
+<section id="testimonials">
+  <div class="section-inner">
+    <div style="max-width:1200px;margin:0 auto;">
+      <div class="reveal" style="text-align:center;margin-bottom:52px;">
+        <div class="section-tag">What People Say</div>
+        <h2 class="section-title">Stories That<br><span class="gt-gold">Prove It Works</span></h2>
+      </div>
+      <div class="testimonial-slider">
+        <div class="testimonials-track" id="testimonials-track">
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-text">RackyWeb changed how I approach web development. Within 3 months I landed my first client and built a $3K/month freelance business.</div>
+            <div class="testimonial-author"><div class="testimonial-avatar" style="background:rgba(245,200,66,0.12);">👩‍💻</div><div><div class="testimonial-name">Sarah K.</div><div class="testimonial-role">Freelance Developer · Nigeria</div></div></div>
+          </div>
+          <div class="testimonial-card reveal" style="transition-delay:.1s;">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-text">The AI tools are genuinely next-level. I used UI Vision AI to redesign my SaaS and conversion rate jumped by 240%.</div>
+            <div class="testimonial-author"><div class="testimonial-avatar" style="background:rgba(16,201,122,0.12);">👨‍🎨</div><div><div class="testimonial-name">Marcus T.</div><div class="testimonial-role">SaaS Founder · UK</div></div></div>
+          </div>
+          <div class="testimonial-card reveal" style="transition-delay:.2s;">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-text">I downloaded the NovaDash template, customised it in a day, and launched my startup the next morning. Investors were seriously impressed.</div>
+            <div class="testimonial-author"><div class="testimonial-avatar" style="background:rgba(247,65,143,0.12);">👩‍🚀</div><div><div class="testimonial-name">Aisha M.</div><div class="testimonial-role">Tech Entrepreneur · UAE</div></div></div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-text">The community is unlike anything I've experienced. Found my co-founder through the community zone.</div>
+            <div class="testimonial-author"><div class="testimonial-avatar" style="background:rgba(155,89,245,0.12);">🧑‍💻</div><div><div class="testimonial-name">Carlos R.</div><div class="testimonial-role">Co-Founder · Brazil</div></div></div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-text">The skill trees made learning so much more engaging. Zero coding knowledge to deploying my first React app in 6 weeks.</div>
+            <div class="testimonial-author"><div class="testimonial-avatar" style="background:rgba(56,189,248,0.12);">👩‍🎓</div><div><div class="testimonial-name">Yuki T.</div><div class="testimonial-role">CS Student → Dev · Japan</div></div></div>
+          </div>
+          <div class="testimonial-card reveal">
+            <div class="testimonial-quote">"</div>
+            <div class="testimonial-text">Project Genesis is pure magic. Described my app idea and had a working prototype in under 5 minutes. The future is here.</div>
+            <div class="testimonial-author"><div class="testimonial-avatar" style="background:rgba(251,146,60,0.12);">🧑‍🔬</div><div><div class="testimonial-name">Raj P.</div><div class="testimonial-role">AI Researcher · India</div></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="slider-controls" id="slider-controls">
+        <div class="slider-dot active" onclick="goToSlide(0)"></div>
+        <div class="slider-dot" onclick="goToSlide(1)"></div>
+        <div class="slider-dot" onclick="goToSlide(2)"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA BAND
+     ============================================================ -->
+<div class="diag-band">
+  <div class="diag-band-img"></div>
+  <div class="diag-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:26px;">
+    <div class="section-tag reveal">The Journey Awaits</div>
+    <h2 class="section-title reveal" style="max-width:700px;">Ready To Build<br><span class="gt-prism">Something Extraordinary?</span></h2>
+    <p style="font-size:17px;color:var(--muted);max-width:480px;line-height:1.75;" class="reveal">Join 48,000+ students, creators, and founders who chose to stop waiting and start building.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;justify-content:center;" class="reveal">
+      <a href="#academy"   class="btn btn-gold btn-pulse" style="font-size:16px;padding:16px 38px;" onclick="ripple(event)">🚀 Enter The Academy</a>
+      <a href="#templates" class="btn btn-ghost"          style="font-size:16px;padding:16px 38px;" onclick="ripple(event)">Explore Templates →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer id="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">RackyWeb Academy</div>
+        <div class="footer-tagline">A premium digital universe for creators, developers, and entrepreneurs building the future of the web.</div>
+        <div style="margin-top:24px;display:flex;gap:10px;">
+          <div class="social-link">𝕏</div>
+          <div class="social-link">in</div>
+          <div class="social-link">yt</div>
+          <div class="social-link">gh</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Academy</div>
+        <ul class="footer-links">
+          <li><a href="#">Learning Paths</a></li>
+          <li><a href="#">Skill Trees</a></li>
+          <li><a href="#">Certifications</a></li>
+          <li><a href="#">Workshops</a></li>
+          <li><a href="#">Mentorship</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="#">Templates Vault</a></li>
+          <li><a href="#">AI Tools</a></li>
+          <li><a href="#">Creator Store</a></li>
+          <li><a href="#">RackyWeb Labs</a></li>
+          <li><a href="#">Launch Services</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 RackyWeb Academy. All rights reserved.</div>
+      <div style="display:flex;gap:20px;font-size:13px;color:var(--muted);">
+        <a href="#" style="color:var(--muted);text-decoration:none;transition:color .2s;">Privacy</a>
+        <a href="#" style="color:var(--muted);text-decoration:none;transition:color .2s;">Terms</a>
+        <a href="#" style="color:var(--muted);text-decoration:none;transition:color .2s;">Cookies</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================
+     FLOATING DOCK
+     ============================================================ -->
+<div id="floating-dock">
+  <a href="#hero"       class="dock-btn">🏠<span class="dock-label">Home</span></a>
+  <a href="#innovation" class="dock-btn">🤖<span class="dock-label">AI Hub</span></a>
+  <a href="#academy"    class="dock-btn">🎓<span class="dock-label">Academy</span></a>
+  <a href="#templates"  class="dock-btn">📦<span class="dock-label">Templates</span></a>
+  <a href="#community"  class="dock-btn">👥<span class="dock-label">Community</span></a>
+  <a href="#startup"    class="dock-btn">🚀<span class="dock-label">Launch</span></a>
+  <a href="#events"     class="dock-btn">📅<span class="dock-label">Events</span></a>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
